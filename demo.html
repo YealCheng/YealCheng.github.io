@@ -10,102 +10,8 @@
             <source src="./OldTalesPreserved.mp3" type="audio/mpeg" />
               一个音频由于浏览器不支持而未播放 
             </audio>
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
         <style>
-            .card {
-            --primary-clr: #1C204B;
-            --dot-clr: #BBC0FF;
-            --play: hsl(195, 74%, 62%);
-            width: 200px;
-            height: 170px;
-            border-radius: 10px;
-            position: absolute;
-                top: -65%;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                margin: auto;
-            }
-
-            .card {
-            font-family: "Arial";
-            color: #fff;
-            display: grid;
-            cursor: pointer;
-            grid-template-rows: 50px 1fr;
-            }
-
-            .card:hover .img-section {
-            -webkit-transform: translateY(1em);
-                -ms-transform: translateY(1em);
-                    transform: translateY(1em);
-            }
-
-            .card-desc {
-            border-radius: 10px;
-            padding: 15px;
-            position: relative;
-            top: -10px;
-            display: grid;
-            gap: 10px;
-            background: var(--primary-clr);
-            }
-
-            .card-time {
-            font-size: 1.7em;
-            font-weight: 500;
-            }
-
-            .img-section {
-            -webkit-transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            background: hsl(195, 74%, 62%);
-            }
-
-            .card-header {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
-            width: 100%;
-            }
-
-            .card-title {
-            -webkit-box-flex: 1;
-                -ms-flex: 1;
-                    flex: 1;
-            font-size: 0.9em;
-            font-weight: 500;
-            }
-
-            .card-menu {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            gap: 4px;
-            margin-inline: auto;
-            }
-
-            .card svg {
-            float: right;
-            max-width: 100%;
-            max-height: 100%;
-            }
-
-            .card .dot {
-            width: 5px;
-            height: 5px;
-            border-radius: 50%;
-            background: var(--dot-clr);
-            }
-
-            .card .recent {
-            line-height: 0;
-            font-size: 0.8em;
-            }
             #body {
                 background-image: url(./bg1.gif);
                 background-size: cover;
@@ -135,107 +41,69 @@
                 font-family: "SAO";
                 src:url(./SAO.otf)
             }
-
-            .flip-card {
-  background-color: transparent;
-  width: 190px;
-  height: 254px;
-  perspective: 1000px;
-  font-family: sans-serif;
-}
-
-.title {
-  font-size: 1.5em;
-  font-weight: 900;
-  text-align: center;
-  margin: 0;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  border: 1px solid coral;
-  border-radius: 1rem;
-}
-
-.flip-card-front {
-  background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%,
-     rgb(255, 211, 195) 40%, rgba(255, 127, 80, 0.603) 48%);
-  color: coral;
-}
-
-.flip-card-back {
-  background: linear-gradient(120deg, rgb(255, 174, 145) 30%, coral 88%,
-     bisque 40%, rgb(255, 185, 160) 78%);
-  color: white;
-  transform: rotateY(180deg);
-}
-            #flip1 {
-                position: absolute;
-                top: -60%;
-                bottom: 0;
-                left: -60%;
-                right: 0;
-                margin: auto;
+            @font-face {
+                font-family: "DG1";
+                src:url(./DS-DIGI-1.ttf)
             }
-            #flip2 {
-                position: absolute;
-                top: -60%;
-                bottom: 0;
-                left: 60%;
-                right: 0;
-                margin: auto;
-            }
-            #flip3 {
-                position: absolute;
-                top: 60%;
-                bottom: 0;
-                left: -60%;
-                right: 0;
-                margin: auto;
-            }
-            #flip4 {
-                position: absolute;
-                top: 60%;
-                bottom: 0;
-                left: 60%;
-                right: 0;
-                margin: auto;
-            }
-            #flip5 {
-                position: absolute;
-                top: 60%;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                margin: auto;
-            }
-            #flip-card-back5 {
-                background: linear-gradient(120deg, rgb(255, 174, 145) 30%, coral 88%,
-                    bisque 40%, rgb(255, 185, 160) 78%);
-                color: white;
-                transform: rotateY(180deg);
-            }
+
+            *{ margin:0; padding:0; list-style:none;}
+            body{ font-size:18px; text-align:center;}
+            .time{ height:30px; padding:200px;}
+
+            table {
+    padding-top: 80px;
+    margin: auto;
+    width: 30%;
+}
+.pinyin {
+    height: 20px;
+    font-size: 1.1em;
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+td {
+    font-size: 8em;
+    text-align: center;
+    font-weight: 700;
+    padding: 0px;
+}
+h2 {
+    margin-top: 15px;
+    margin-bottom: 100px;
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: 700;
+    word-spacing: 5px;
+}
+p {
+    font-weight: 700;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+button {
+    background-color: #ef941a;
+    color: #fffbe2;
+    width: 200px;
+    position: relative;
+    border-radius: 5px;
+    margin: 0;
+    padding: 0;
+    line-height: 0.5;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+button:hover,
+button:focus {
+    background-color: #efa134;
+}
+button:active {
+    transform: translate(0px, 2px);
+    -webkit-transform: translate(0px, 2px);
+}
         </style>
         <script>
             function setStyl(){
@@ -256,91 +124,216 @@
                 document.getElementById("body").style.backgroundImage="url('./bg2.jpg')";
             }
             
+            function GetRTime(){
+       var EndTime= new Date('2023/01/22 00:00:00');//这里设置你预定的时间
+       var NowTime = new Date();
+       var t =EndTime.getTime() - NowTime.getTime();
+       /* var d=Math.floor(t/1000/60/60/24); */
+       var h=Math.floor(t/1000/60/60%24);
+       var m=Math.floor(t/1000/60%60);
+       var s=Math.floor(t/1000%60);
+
+       /* document.getElementById("t_d").innerHTML = d + "天"; */
+       document.getElementById("t_h").innerHTML = h + ":";
+       document.getElementById("t_m").innerHTML = m + ":";
+       document.getElementById("t_s").innerHTML = s + "";
+       if(s=="0" && m=="0" && h=="0" && d=="0"){
+       document.getElementById("daoqi").innerHTML ="时间到了，是时候做xxx了";//这里设置到期时间后的提醒内容
+       document.getElementById("daoqi").style.color="red";}
+
+       var pinyin1 = document.getElementById("pinyin1");
+var pinyin2 = document.getElementById("pinyin2");
+var pinyin3 = document.getElementById("pinyin3");
+var pinyin4 = document.getElementById("pinyin4");
+
+var phraseChinese1 = document.getElementById("phraseChinese1");
+var phraseChinese2 = document.getElementById("phraseChinese2");
+var phraseChinese3 = document.getElementById("phraseChinese3");
+var phraseChinese4 = document.getElementById("phraseChinese4");
+
+var phraseEnglish = document.getElementById("phraseEnglish");
+
+var button = document.getElementById("button");
+var random = Math.random();
+
+// Arrays for pinyin and Chinese characters
+var p1 = [
+    "xīn",
+    "gōng",
+    "dà",
+    "wàn",
+    "nián",
+    "shēn",
+    "xīn",
+    "gōng"
+];
+
+var p2 = [
+    "nián",
+    "xǐ",
+    "jí",
+    "shì",
+    "nián",
+    "tǐ",
+    "xiǎng",
+    "hè"
+];
+
+var p3 = [
+    "kuài",
+    "fā",
+    "dà",
+    "rú",
+    "yǒu",
+    "jiàn",
+    "shì",
+    "xīn"
+];
+
+var p4 = [
+    "lè",
+    "cái",
+    "lì",
+    "yì",
+    "yú",
+    "kāng",
+    "chéng",
+    "xǐ"
+];
+
+var phrasesC1 = [
+    "新",
+    "恭",
+    "大",
+    "萬",
+    "年",
+    "身",
+    "心",
+    "恭",
+    "兔",
+    "青"
+];
+
+var phrasesC2 = [
+    "年",
+    "喜",
+    "吉",
+    "事",
+    "年",
+    "體",
+    "想",
+    "賀",
+    "圆",
+    "春"
+];
+
+var phrasesC3 = [
+    "快",
+    "發",
+    "大",
+    "如",
+    "有",
+    "健",
+    "事",
+    "新",
+    "鱼",
+    "永"
+];
+
+var phrasesC4 = [
+    "樂",
+    "財",
+    "利",
+    "意",
+    "餘",
+    "康",
+    "成",
+    "禧",
+    "润",
+    "兔"
+];
+
+// English phrases
+// Translations taken from here: http://www.travelsintranslation.com/2014/01/cantonese-chinese-new-year-phrases/
+var phrasesE = [
+    "(Happy new year)",
+    "(Congratulations on your prosperity)",
+    "(Great luck and prosperity)",
+    "(May 10,000 things go according to your wishes)",
+    "(Every year have more than you need)",
+    "(Wishing you good health)",
+    "(May all your heart's desires come true)",
+    "(Congratulations in the new year)",
+    "(A little chubby girl)",
+    "(Forever young)"
+];
+
+// Sets text content as random phrase from arrays
+pinyin1.textContent = p1[Math.floor(random * p1.length)];
+pinyin2.textContent = p2[Math.floor(random * p2.length)];
+pinyin3.textContent = p3[Math.floor(random * p3.length)];
+pinyin4.textContent = p4[Math.floor(random * p4.length)];
+
+phraseChinese1.textContent = phrasesC1[Math.floor(random * phrasesC1.length)];
+phraseChinese2.textContent = phrasesC2[Math.floor(random * phrasesC2.length)];
+phraseChinese3.textContent = phrasesC3[Math.floor(random * phrasesC3.length)];
+phraseChinese4.textContent = phrasesC4[Math.floor(random * phrasesC4.length)];
+
+phraseEnglish.textContent = phrasesE[Math.floor(random * phrasesE.length)];
+
+var onClick = function() {
+    var random = Math.random();
+
+    pinyin1.textContent = p1[Math.floor(random * p1.length)];
+    pinyin2.textContent = p2[Math.floor(random * p2.length)];
+    pinyin3.textContent = p3[Math.floor(random * p3.length)];
+    pinyin4.textContent = p4[Math.floor(random * p4.length)];
+
+    phraseChinese1.textContent = phrasesC1[Math.floor(random * phrasesC1.length)];
+    phraseChinese2.textContent = phrasesC2[Math.floor(random * phrasesC2.length)];
+    phraseChinese3.textContent = phrasesC3[Math.floor(random * phrasesC3.length)];
+    phraseChinese4.textContent = phrasesC4[Math.floor(random * phrasesC4.length)];
+
+    phraseEnglish.textContent = phrasesE[Math.floor(random * phrasesE.length)];
+}
+
+// Sets text content as random phrase when button is clicked
+button.addEventListener("click", onClick);
+
+}
+   setInterval(GetRTime,0);
         </script>
     </head>
     <body id="body">
+        <table>
+    <tr>
+        <th class="pinyin" id="pinyin1">xīn</th>
+        <th class="pinyin" id="pinyin2">nián</th>
+        <th class="pinyin" id="pinyin3">kuài</th>
+        <th class="pinyin" id="pinyin4">lè</th>
+    </tr>
+    <tr>
+        <td id="phraseChinese1">新</td>
+        <td id="phraseChinese2">年</td>
+        <td id="phraseChinese3">快</td>
+        <td id="phraseChinese4">樂</td>
+    </tr>
+</table>
+
+<h2 id="phraseEnglish">(Happy new year)</h2>
+    
+        <div id="divbtn"><button id="button" onclick="setStyl();autoPlay()">Click ME!</button></div>
+        </div>
+
+        <div class="deng-box2"><div class="deng"><div class="xian"></div><div class="deng-a"><div class="deng-b"><div class="deng-t">年</div></div></div><div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div></div></div><div class="deng-box3"><div class="deng"><div class="xian"></div><div class="deng-a"><div class="deng-b"><div class="deng-t">新</div></div></div><div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div></div></div><div class="deng-box1"><div class="deng"><div class="xian"></div><div class="deng-a"><div class="deng-b"><div class="deng-t">乐</div></div></div><div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div></div></div><div class="deng-box"><div class="deng"><div class="xian"></div><div class="deng-a"><div class="deng-b"><div class="deng-t">快</div></div></div><div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div></div></div><style type="text/css">.deng-box{position:fixed;top:-40px;right:-20px;z-index:9999;pointer-events:none}.deng-box1{position:fixed;top:-30px;right:10px;z-index:9999;pointer-events:none}.deng-box2{position:fixed;top:-40px;left:-20px;z-index:9999;pointer-events:none}.deng-box3{position:fixed;top:-30px;left:10px;z-index:9999;pointer-events:none}.deng-box1 .deng,.deng-box3 .deng{position:relative;width:120px;height:90px;margin:50px;background:#d8000f;background:rgba(216,0,15,.8);border-radius:50% 50%;-webkit-transform-origin:50% -100px;-webkit-animation:swing 5s infinite ease-in-out;box-shadow:-5px 5px 30px 4px #fc903d}.deng{position:relative;width:120px;height:90px;margin:50px;background:#d8000f;background:rgba(216,0,15,.8);border-radius:50% 50%;-webkit-transform-origin:50% -100px;-webkit-animation:swing 3s infinite ease-in-out;box-shadow:-5px 5px 50px 4px #fa6c00}.deng-a{width:100px;height:90px;background:#d8000f;background:rgba(216,0,15,.1);margin:12px 8px 8px 8px;border-radius:50% 50%;border:2px solid #dc8f03}.deng-b{width:45px;height:90px;background:#d8000f;background:rgba(216,0,15,.1);margin:-4px 8px 8px 26px;border-radius:50% 50%;border:2px solid #dc8f03}.xian{position:absolute;top:-20px;left:60px;width:2px;height:20px;background:#dc8f03}.shui-a{position:relative;width:5px;height:20px;margin:-5px 0 0 59px;-webkit-animation:swing 4s infinite ease-in-out;-webkit-transform-origin:50% -45px;background:orange;border-radius:0 0 5px 5px}.shui-b{position:absolute;top:14px;left:-2px;width:10px;height:10px;background:#dc8f03;border-radius:50%}.shui-c{position:absolute;top:18px;left:-2px;width:10px;height:35px;background:orange;border-radius:0 0 0 5px}.deng:before{position:absolute;top:-7px;left:29px;height:12px;width:60px;content:" ";display:block;z-index:999;border-radius:5px 5px 0 0;border:solid 1px #dc8f03;background:orange;background:linear-gradient(to right,#dc8f03,orange,#dc8f03,orange,#dc8f03)}.deng:after{position:absolute;bottom:-7px;left:10px;height:12px;width:60px;content:" ";display:block;margin-left:20px;border-radius:0 0 5px 5px;border:solid 1px #dc8f03;background:orange;background:linear-gradient(to right,#dc8f03,orange,#dc8f03,orange,#dc8f03)}.deng-t{font-family:华文行楷,Arial,Lucida Grande,Tahoma,sans-serif;font-size:3.2rem;color:#dc8f03;font-weight:700;line-height:85px;text-align:center}.night .deng-box,.night .deng-box1,.night .deng-t{background:0 0!important}@-moz-keyframes swing{0%{-moz-transform:rotate(-10deg)}50%{-moz-transform:rotate(10deg)}100%{-moz-transform:rotate(-10deg)}}@-webkit-keyframes swing{0%{-webkit-transform:rotate(-10deg)}50%{-webkit-transform:rotate(10deg)}100%{-webkit-transform:rotate(-10deg)}}</style> 
+
+        <div class="time">
+            <!-- <span id="t_d">00天</span> -->
+            <b id="t_h" style="font-size: 117px; font-family: 'DG1'; font-style: italic;">00时</b>
+            <b id="t_m" style="font-size: 117px; font-family: 'DG1'; font-style: italic;">00分</b>
+            <b id="t_s" style="font-size: 117px; font-family: 'DG1'; font-style: italic;">00秒</b>
+        <span id="daoqi"></span>
+        </div>
         
-        <div id="divbtn"><button id="button" onclick="setStyl();autoPlay()">LinkStart</button></div>
-        </div>
-        <div class="card work">
-            <div class="img-section">
-            <svg xmlns="http://www.w3.org/2000/svg" height="77" width="76"><path fill-rule="nonzero" fill="#3F9CBB" d="m60.91 71.846 12.314-19.892c3.317-5.36 3.78-13.818-2.31-19.908l-26.36-26.36c-4.457-4.457-12.586-6.843-19.908-2.31L4.753 15.69c-5.4 3.343-6.275 10.854-1.779 15.35a7.773 7.773 0 0 0 7.346 2.035l7.783-1.945a3.947 3.947 0 0 1 3.731 1.033l22.602 22.602c.97.97 1.367 2.4 1.033 3.732l-1.945 7.782a7.775 7.775 0 0 0 2.037 7.349c4.49 4.49 12.003 3.624 15.349-1.782Zm-24.227-46.12-1.891-1.892-1.892 1.892a2.342 2.342 0 0 1-3.312-3.312l1.892-1.892-1.892-1.891a2.342 2.342 0 0 1 3.312-3.312l1.892 1.891 1.891-1.891a2.342 2.342 0 0 1 3.312 3.312l-1.891 1.891 1.891 1.892a2.342 2.342 0 0 1-3.312 3.312Zm14.19 14.19a2.343 2.343 0 1 1 3.315-3.312 2.343 2.343 0 0 1-3.314 3.312Zm0 7.096a2.343 2.343 0 0 1 3.313-3.312 2.343 2.343 0 0 1-3.312 3.312Zm7.096-7.095a2.343 2.343 0 1 1 3.312 0 2.343 2.343 0 0 1-3.312 0Zm0 7.095a2.343 2.343 0 0 1 3.312-3.312 2.343 2.343 0 0 1-3.312 3.312Z"></path></svg>                </div>
-            <div class="card-desc">
-            <div class="card-header">
-            <div class="card-title">崔洪瑞</div>
-            <div class="card-menu">
-            <div class="dot"></div>
-            <div class="dot"></div>
-              <div class="dot"></div>
-              </div>
-            </div>
-            <div class="card-time" style="font-size:16px;"><span style="font-size: large;">生日！</span><br/><span style="font-style: italic;">值得高兴的一天</span></div>
-            <p class="recent" style="font-size: 8px;">小隐隐陵薮，大隐隐朝市</p>
-          </div></div>
-
-          <div class="flip-card" id="flip1">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <p class="title">翻开看看</p>
-                    <p style="font-size: 10px;">或许有什么东西</p>
-                </div>
-                <div class="flip-card-back">
-                    <p class="title">这还没有写东西呢，看看别的？</p>
-                    <p style="font-size: 6px;">你正在阅读这行字</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="flip-card" id="flip2">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <p class="title">这是......</p>
-                    <p>会有什么呢？</p>
-                </div>
-                <div class="flip-card-back">
-                    <img src="./popcat.jpg">
-                    <p>天呐这图太大了</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="flip-card"id="flip3">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <p class="title">相信我，这后面是只猫</p>
-                    <p>小心点</p>
-                </div>
-                <div class="flip-card-back">
-                    <img src="./cat1.jpg">
-                    <p>千钧一发，还好按下了暂停键</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="flip-card" id="flip4">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <p class="title">大森罗万象狂气卡</p>
-                    <p>「轻翻轻放」</p>
-                </div>
-                <div class="flip-card-back">
-                    <p class="title">这张卡就交给你了</p>
-                    <p>毕竟前方的路还要自己走</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="flip-card" id="flip5">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <p class="title">翻“折”卡</p>
-                    <p>有人不小心将它折了一下</p>
-                </div>
-                <div id="flip-card-back5">
-                    <p class="title">祝你生日快乐~</p>
-                    <p>开心点，伙计</p>
-                </div>
-            </div>
-        </div>
     </body>
 </html>
